@@ -1,31 +1,71 @@
 package com.main;
-
 import com.obj.Students;
 
 public class App {
+	
+	static int nav;
+	static int nav1;
 
 	public static void main(String[] args) {
-		Students myStudents = new Students();
+			
+		nav = 1;
+		nav1=1;
 		
-		Students aluno = new Students("Luis Botta", "(11)93085-5742", "Guitarra");
-		Students aluno1 = new Students("Luis", "11-930855742", "Guitar");
+		while(true) {
+			
+			System.out.println("Welcome to Guitar School \n" + 
+			"Choose one  option bellow: \n" +
+			"1- Students\n" +
+			"2- Finance\n" +
+			"3- Classes");
+			
+			if(nav == 1) {
+				
+				System.out.println("Chose one option bellow: \n" +
+				"1- Add a Student\n" +
+				"2- Remove a Student\n" +
+				"3- List all Students");
+				
+				switch(nav1) {
+				
+				case 1:
+					System.out.println("Adding a Student, Please submit the info: ");
+					
+					Students aluno = new Students("Luis", "5555","Guitar");
+					
+					break;
+	
+				case 2:
+					System.out.println("Removing a student, Please submit the Id");
+					
+					break;
+					
+				
+				case 3:
+					System.out.println("Students List:");
+					
+					
+					break;
+					
+				default:
+					System.out.println("You did something wrong, please verify the number");
+					
+			}
+			break;
+			
+		}
 		
-		aluno.payClass(120.0);
-		
-		aluno1.payClass(120.0);
 		
 		
-		System.out.println("Ola " + aluno.getName() + " portador do id:" + aluno.getId());
-		System.out.println("Estamos entrando em contato atraves do " + aluno.getContact());
-		System.out.println("Para marcamos sua aula de: " + aluno.getInstrument());
-		System.out.println("Lembrando que voce tem um saldo de R$ " + aluno.getBalance());
 		
-		System.out.println("\n");
 		
-		System.out.println("Ola " + aluno1.getName() + " portador do id:" + aluno1.getId());
-		System.out.println("Estamos entrando em contato atraves do " + aluno1.getContact());
-		System.out.println("Para marcamos sua aula de: " + aluno1.getInstrument());
-		System.out.println("Lembrando que voce tem um saldo de R$ " + aluno1.getBalance());
+		
+		
+		
+		
+		
 	}
+		
+}
 
 }

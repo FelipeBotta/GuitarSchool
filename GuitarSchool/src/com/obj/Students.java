@@ -6,8 +6,8 @@ public class Students<String> extends Finance {
 	
 	int id;
 	private String name;
-	String contact;
-	String instrument;
+	private String contact;
+	private String instrument;
 	
 	public Students(String name, String contact, String instrument) {
 		super();
@@ -15,11 +15,6 @@ public class Students<String> extends Finance {
 		this.setName(name);
 		this.contact = contact;
 		this.instrument = instrument;
-	}
-
-
-	public Students() {
-		// TODO Auto-generated constructor stub
 	}
 
 
