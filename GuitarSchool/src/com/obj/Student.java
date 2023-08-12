@@ -9,18 +9,15 @@ public class Student extends Finance {
 	private String contact;
 	private String instrument;
 	
+
+
 	public void Student() {
-		getId();
-		getName();
-		getContact();
-		getInstrument();
+		this.id = SEQUENTIAL++;
 		
 	}
 	
-	public void addStudent(String name, String contact, String instrument) {
-		Student aluno = new Student();
-		this.id = SEQUENTIAL++;
-		this.setName(name);
+	public void Student(String name, String contact, String instrument) {
+		this.name = name;
 		this.contact = contact;
 		this.instrument = instrument;
 		
@@ -58,10 +55,9 @@ public class Student extends Finance {
 	}
 	
 	@Override
-	public String toString() {
-		return "Student [getName()=" + getName() + ", getId()=" + getId() + ", getContact()=" + getContact()
-				+ ", getInstrument()=" + getInstrument() + "]";
-	}
+    public String toString() {
+        return "Student [id=" + id + ", name=" + name + ", contact=" + contact + ", instrument=" + instrument + "]";
+    }
 
 
 	
