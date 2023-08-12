@@ -10,6 +10,10 @@ public class Student extends Finance {
 	private String instrument;
 	
 	public void Student() {
+		getId();
+		getName();
+		getContact();
+		getInstrument();
 		
 	}
 	

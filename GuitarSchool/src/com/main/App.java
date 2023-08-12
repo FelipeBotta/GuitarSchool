@@ -13,7 +13,7 @@ public class App {
 		Student listaAlunos = new <ArrayList> Student();
 			
 		nav = 1;
-		nav1=3;
+		nav1=1;
 		
 		while(true) {
 			
@@ -37,8 +37,8 @@ public class App {
 					
 					listaAlunos.addStudent("Felipe", "11930855742", "Guitar");;
 					
+					nav=3;
 					break;
-	
 				case 2:
 					System.out.println("Removing a student, Please submit the Id");
 					
