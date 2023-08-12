@@ -1,5 +1,7 @@
 package com.main;
-import com.obj.Students;
+import java.util.ArrayList;
+
+import com.obj.Student;
 
 public class App {
 	
@@ -7,9 +9,11 @@ public class App {
 	static int nav1;
 
 	public static void main(String[] args) {
+		
+		Student listaAlunos = new <ArrayList> Student();
 			
 		nav = 1;
-		nav1=1;
+		nav1=3;
 		
 		while(true) {
 			
@@ -31,7 +35,7 @@ public class App {
 				case 1:
 					System.out.println("Adding a Student, Please submit the info: ");
 					
-					Students aluno = new Students("Luis", "5555","Guitar");
+					listaAlunos.addStudent("Felipe", "11930855742", "Guitar");;
 					
 					break;
 	
@@ -44,6 +48,7 @@ public class App {
 				case 3:
 					System.out.println("Students List:");
 					
+					System.out.println(listaAlunos);
 					
 					break;
 					
@@ -67,5 +72,7 @@ public class App {
 	}
 		
 }
+
+	
 
 }

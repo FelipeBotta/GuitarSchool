@@ -1,6 +1,6 @@
 package com.obj;
 
-public class Students<String> extends Finance {
+public class Student extends Finance {
 	
 	private static int SEQUENTIAL =1;
 	
@@ -9,12 +9,18 @@ public class Students<String> extends Finance {
 	private String contact;
 	private String instrument;
 	
-	public Students(String name, String contact, String instrument) {
-		super();
+	public void Student() {
+		
+	}
+	
+	public void addStudent(String name, String contact, String instrument) {
+		Student aluno = new Student();
 		this.id = SEQUENTIAL++;
 		this.setName(name);
 		this.contact = contact;
 		this.instrument = instrument;
+		
+		
 	}
 
 
@@ -45,6 +51,12 @@ public class Students<String> extends Finance {
 
 	public void setInstrument(String instrument) {
 		this.instrument = instrument;
+	}
+	
+	@Override
+	public String toString() {
+		return "Student [getName()=" + getName() + ", getId()=" + getId() + ", getContact()=" + getContact()
+				+ ", getInstrument()=" + getInstrument() + "]";
 	}
 
 
