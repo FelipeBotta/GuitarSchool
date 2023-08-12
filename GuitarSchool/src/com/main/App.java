@@ -5,6 +5,8 @@ import com.obj.Students;
 public class App {
 
 	public static void main(String[] args) {
+		Students myStudents = new Students();
+		
 		Students aluno = new Students("Luis Botta", "(11)93085-5742", "Guitarra");
 		Students aluno1 = new Students("Luis", "11-930855742", "Guitar");
 		

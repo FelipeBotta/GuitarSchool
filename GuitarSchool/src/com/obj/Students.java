@@ -1,6 +1,6 @@
 package com.obj;
 
-public class Students extends Finance {
+public class Students<String> extends Finance {
 	
 	private static int SEQUENTIAL =1;
 	
@@ -15,6 +15,11 @@ public class Students extends Finance {
 		this.setName(name);
 		this.contact = contact;
 		this.instrument = instrument;
+	}
+
+
+	public Students() {
+		// TODO Auto-generated constructor stub
 	}
 
 
