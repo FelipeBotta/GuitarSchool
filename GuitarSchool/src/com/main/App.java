@@ -1,5 +1,6 @@
 package com.main;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -9,7 +10,10 @@ public class App {
 	
 	static int nav;
 	static int nav1;
+	
+	private static int SEQUENTIAL =1;
 
+	
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
@@ -61,15 +65,30 @@ public class App {
 					String contact = sc.next();
 					String instrument = sc.next();
 					Student aluno = new Student();
+					aluno.setId(SEQUENTIAL);
+					aluno.setName(name);
+					aluno.setContact(contact);
+					aluno.setInstrument(instrument);
 					listaAlunos.add(aluno);
 					System.out.println("Student added successfully");
+					SEQUENTIAL++;
 					break;
 				
 				case 2:
 					System.out.println("Removing a student, Please submit the Id");
 					
-					break;
+					int idToRemove = sc.nextInt();
+					Iterator<Student> iterator = listaAlunos.iterator();
 					
+					while (iterator.hasNext()) {
+						Student aluno1 = iterator.next();
+								if(aluno1.getId() == idToRemove) {
+									iterator.remove();
+									System.out.println("Student removed successfully");
+									break;				
+						}
+					}
+					break;					
 				
 				case 3:
 					System.out.println("Students List:");

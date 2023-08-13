@@ -2,7 +2,6 @@ package com.obj;
 
 public class Student extends Finance {
 	
-	private static int SEQUENTIAL =1;
 	
 	int id;
 	private String name;
@@ -12,7 +11,6 @@ public class Student extends Finance {
 
 
 	public void Student() {
-		this.id = SEQUENTIAL++;
 		
 	}
 	
@@ -36,7 +34,11 @@ public class Student extends Finance {
 	public int getId() {
 		return id;
 	}
-
+	
+	public void setId(int id) {
+		this.id = id;
+		
+	}
 
 	public String getContact() {
 		return contact;
