@@ -43,7 +43,8 @@ public class App {
 			}else {
 				System.out.println("Invalid option.");
 			}
-			sc.close();}
+			//sc.close();
+			}
 		}
 		
 		private static void handleStudentMenu(Scanner sc, List<Student> listaAlunos) {
@@ -60,7 +61,7 @@ public class App {
 				
 				switch(nav1) {
 				case 1:
-					System.out.println("Adding a Student, Please submit the info: ");
+					System.out.println("Adding a Student, Please submit the info: (NAME/CONTACT/INSTRUMENT");
 					String name = sc.next();
 					String contact = sc.next();
 					String instrument = sc.next();
@@ -104,7 +105,8 @@ public class App {
 				default:
 					System.out.println("You did something wrong, please verify the number");
 					
-			}			
+			}
+				sc.close();
 		}
 		
 		
